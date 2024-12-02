@@ -16,7 +16,9 @@ public class LinkedList {
 		this.head = head;
 	}
 	
-	
+	public boolean isEmpty() {
+		return head == null;
+	}
 	
 	// Insert functions
 	public boolean insertAtBeggining(int data) {
