@@ -32,7 +32,7 @@ public class LinkedList {
 	
 	public boolean insertAtEnd(int data) {
 		Node newNode = new Node(data);
-		if(head == null) {
+		if(isEmpty()) {
 			head = newNode;
 			return true;
 		}
@@ -41,6 +41,31 @@ public class LinkedList {
 			temp = temp.getNext();
 		}
 		temp.setNext(newNode);
+		return true;
+	}
+	
+	// Brisanje cvora po vrijednosti
+	public boolean deleteByValue(int data) {
+		if(isEmpty()) {
+			System.out.println("Lista je vec prazna");
+			return false;
+		}
+		if(head.getData() == data) {
+			head = head.getNext();
+			// Obavezno! kad se elemenat izbrise iz liste, sledeci korak je izlazak funkcije! 
+			return true;
+		}
+		Node temp = head;
+		Node previousNode = null;
+		while(temp != null && temp.getData() != data) {
+			previousNode = temp;
+			temp = temp.getNext();
+		}
+		if(temp == null) {
+			System.out.println("Data vrijednost ne postoji u listi.");
+			return false;
+		}
+		previousNode = temp.getNext();
 		return true;
 	}
 	
