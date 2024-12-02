@@ -37,7 +37,7 @@ public class LinkedList {
 			return true;
 		}
 		Node temp = head;
-		while(temp != null) {
+		while(temp.getNext() != null) {
 			temp = temp.getNext();
 		}
 		temp.setNext(newNode);
@@ -87,6 +87,7 @@ public class LinkedList {
 		Node temp = head;
 		while(temp != null) {
 			System.out.print(temp.getData() + " -> ");
+			temp = temp.getNext();
 		}
 		System.out.println("Null");
 	}
