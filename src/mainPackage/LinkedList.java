@@ -16,6 +16,8 @@ public class LinkedList {
 		this.head = head;
 	}
 	
+	
+	
 	// Insert functions
 	public boolean insertAtBeggining(int data) {
 		Node newNode = new Node(data);
@@ -26,6 +28,18 @@ public class LinkedList {
 		return true;
 	}
 	
-	
+	public boolean insertAtEnd(int data) {
+		Node newNode = new Node(data);
+		if(head == null) {
+			head = newNode;
+			return true;
+		}
+		Node temp = head;
+		while(temp != null) {
+			temp = temp.getNext();
+		}
+		temp.setNext(newNode);
+		return true;
+	}
 	
 }
