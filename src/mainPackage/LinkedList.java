@@ -65,7 +65,7 @@ public class LinkedList {
 			System.out.println("Data vrijednost ne postoji u listi.");
 			return false;
 		}
-		previousNode = temp.getNext();
+		previousNode.setNext(temp.getNext());
 		return true;
 	}
 	
