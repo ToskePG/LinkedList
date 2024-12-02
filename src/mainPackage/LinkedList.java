@@ -69,4 +69,26 @@ public class LinkedList {
 		return true;
 	}
 	
+	public boolean deleteHead() {
+		if(isEmpty()) {
+			System.out.println("Lista je prazna");
+			return false;
+		}
+		head = head.getNext();
+		return true;
+	}
+	
+	// Display list
+	public void displayList() {
+		if(isEmpty()) {
+			System.out.println("Lista je prazna");
+			return;
+		}
+		Node temp = head;
+		while(temp != null) {
+			System.out.print(temp.getData() + " -> ");
+		}
+		System.out.println("Null");
+	}
+	
 }
