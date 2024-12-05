@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		LinkedList l1 = new LinkedList();
+		/*LinkedList l1 = new LinkedList();
 		
 		l1.displayList();
 		System.out.println("-------------------");
@@ -41,7 +41,13 @@ public class Test {
 		l1.insertAtEnd(8);
 		l1.deleteByValue(7);
 		l1.displayList();
-		System.out.println("-------------------");
+		System.out.println("-------------------"); */
+		
+		System.out.println("Kurcina");
+		
+		Stack playerStack = new Stack();
+		
+		
 
 	}
 
